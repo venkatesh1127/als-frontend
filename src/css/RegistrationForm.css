@@ -1,0 +1,76 @@
+/* RegistrationForm.css */
+
+.registration-container {
+    background-color: #fff; /* White background */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    width: 100%;
+    max-width: 800px; /* Adjust the max-width based on your preference */
+    margin: 50px auto; /* Adjust the top margin based on your preference */
+  }
+  
+  .registration-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333; /* Dark gray text */
+  }
+  
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between fields */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    color: #5f6368; /* Light Gray */
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-group input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  .form-group input:focus {
+    border-color: #007bff; /* Blue border on focus */
+  }
+  
+  .registration-submit {
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .registration-submit:hover {
+    background-color: #0062cc; /* Darker blue on hover */
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 576px) {
+    .registration-container {
+      padding: 15px;
+    }
+  
+    .form-group input {
+      margin-bottom: 5px;
+    }
+  }
+  
