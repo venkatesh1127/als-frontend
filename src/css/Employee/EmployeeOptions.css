@@ -1,0 +1,43 @@
+/* EmployeeOptions.css */
+
+/* Basic styling for the options container */
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensure equal spacing between buttons */
+  gap: 10px; /* Adjusted gap for better spacing */
+  width: 100%; /* Ensure it takes up the full width */
+}
+
+/* Styling for each option */
+.option {
+  flex-basis: calc(33.33% - 10px); /* Each option occupies 33.33% of the container width with a 10px gap */
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent and slightly faded background */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px; /* Added margin for better spacing */
+}
+
+.option:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparent on hover */
+}
+
+/* Adjustments for better spacing if needed */
+@media (max-width: 768px) {
+  .option {
+    flex-basis: calc(50% - 10px); /* Each option occupies 50% of the container width on smaller screens */
+  }
+}
+
+/* Additional adjustment for smaller screens */
+@media (max-width: 480px) {
+  .option {
+    flex-basis: 100%; /* Each option occupies 100% of the container width on even smaller screens */
+  }
+}
