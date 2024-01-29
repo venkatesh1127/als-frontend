@@ -1,7 +1,7 @@
 // RegistrationForm.js
 
 import React, { useState } from 'react';
-import '../css/RegistrationForm.css'; // Import the CSS file for styling
+import '../../css/Common/RegistrationForm.css'; // Import the CSS file for styling
 
 const RegistrationForm = () => {
   const [firstName, setFirstName] = useState('');

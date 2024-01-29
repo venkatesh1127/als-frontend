@@ -1,7 +1,7 @@
 // EmployeeOptions.js
 
 import React from 'react';
-import '../css/EmployeeOptions.css';
+import '../../css/Employee/EmployeeOptions.css';
 
 const EmployeeOptions = () => {
   // Sample options (you can replace these with your actual options)
