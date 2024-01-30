@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between; /* Align header elements to the left and right */
   align-items: center; /* Vertically center header elements */
-  padding: 10px 0px; /* Add padding for spacing */
+  padding: 5px 0px; /* Add padding for spacing */
   background-color: #f7e5e5;
   color: #333; /* Dark gray text */
   position: fixed; /* Fix header at the top */
@@ -17,6 +17,7 @@
 
 /* Left section of the header */
 .header-left {
+  margin-left: 15px;
   display: flex;
   align-items: center; /* Vertically align logo and company name */
 }
@@ -30,7 +31,7 @@
 
 /* Header logo */
 .header-logo {
-  height: 40px; /* Adjust image height as needed */
+  height: 25px; /* Adjust image height as needed */
 }
 
 /* Company information */
