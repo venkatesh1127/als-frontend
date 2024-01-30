@@ -1,0 +1,21 @@
+/* SubmitButton.css */
+
+.submit-button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #0070c9; /* Apple's blue color */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #004276; /* Slightly darker blue on hover */
+  }
+  
