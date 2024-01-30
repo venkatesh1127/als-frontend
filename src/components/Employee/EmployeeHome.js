@@ -4,7 +4,8 @@ import React from 'react';
 import Header from '../Common/Header';
 import EmployeeProfile from './EmployeeProfile';
 import EmployeeOptions from './EmployeeOptions';
-import '../css/EmployeeHome.css';
+import '../../css/Employee/EmployeeHome.css';
+import '../../css/Employee/EmployeeOptions.css';
 
 const EmployeeHome = () => {
   return (
