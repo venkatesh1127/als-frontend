@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 // AddInterview.js
 
 import React, { useState } from 'react';
 import '../../css/Employee/AddInterview.css'; // Adjust the import path accordingly
+=======
+import React from 'react';
+import '../../css/Employee/AddInterview.css'; // Update the CSS import
+import SubmitButton from '../Common/SubmitButton'; // Import the SubmitButton component
+>>>>>>> f75487cac08f32a3be967257433dfd2071734f08
 
 const AddInterview = ({ isOpen, onClose, onSubmit }) => {
   const [submissionCompany, setSubmissionCompany] = useState('');
@@ -35,6 +41,7 @@ const AddInterview = ({ isOpen, onClose, onSubmit }) => {
               <option value="Company B">Company B</option>
               {/* Add more companies as needed */}
             </select>
+<<<<<<< HEAD
           </label>
 
           <label>
@@ -74,6 +81,24 @@ const AddInterview = ({ isOpen, onClose, onSubmit }) => {
           </label>
 
           <button type="submit">Submit</button>
+=======
+          </div>
+          <div className="form-group">
+            <label htmlFor="interviewDateTime">Interview Date and Time:</label>
+            <input type="datetime-local" id="interviewDateTime" name="interviewDateTime" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="round">Round:</label>
+            <input type="text" id="round" name="round" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="notes">Notes:</label>
+            {/* Updated textarea with rows and cols attributes */}
+            <textarea id="notes" name="notes" rows="4" cols="50" />
+          </div>
+          {/* Use the SubmitButton component */}
+          <SubmitButton label="Submit" />
+>>>>>>> f75487cac08f32a3be967257433dfd2071734f08
         </form>
       </div>
     </div>
