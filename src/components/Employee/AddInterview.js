@@ -1,47 +1,78 @@
 // AddInterview.js
-import React from 'react';
-import '../../css/Employee/AddInterview.css'; // Update the CSS import
+
+import React, { useState } from 'react';
+import '../../css/Employee/AddInterview.css'; // Adjust the import path accordingly
 
 const AddInterview = ({ isOpen, onClose, onSubmit }) => {
-  if (!isOpen) return null;
+  const [submissionCompany, setSubmissionCompany] = useState('');
+  const [interviewDate, setInterviewDate] = useState('');
+  const [interviewTime, setInterviewTime] = useState('');
+  const [round, setRound] = useState('');
+  const [notes, setNotes] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
-    const formData = {
-      submissionType: e.target.submissionType.value,
-      interviewDateTime: e.target.interviewDateTime.value,
-      round: e.target.round.value,
-      notes: e.target.notes.value,
-    };
-    onSubmit(formData);
+    onSubmit({
+      submissionCompany,
+      interviewDate,
+      interviewTime,
+      round,
+      notes,
+    });
   };
 
   return (
-    <div className="modal-overlay">
+    <div className={`modal ${isOpen ? 'open' : 'closed'}`}>
       <div className="modal-content">
-        <span className="close-btn" onClick={onClose}>&times;</span>
+        <span className="close" onClick={onClose}>&times;</span>
         <h2>Add Interview</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="submissionType">Submission Type:</label>
-            <select id="submissionType" name="submissionType">
-              <option value="resume">Resume</option>
-              <option value="application">Application</option>
-              <option value="other">Other</option>
+        <form onSubmit={handleFormSubmit}>
+          <label>
+            Submission Company:
+            <select value={submissionCompany} onChange={(e) => setSubmissionCompany(e.target.value)}>
+              <option value="">Select Submission Company</option>
+              <option value="Company A">Company A</option>
+              <option value="Company B">Company B</option>
+              {/* Add more companies as needed */}
             </select>
-          </div>
-          <div className="form-group">
-            <label htmlFor="interviewDateTime">Interview Date and Time:</label>
-            <input type="datetime-local" id="interviewDateTime" name="interviewDateTime" />
-          </div>
-          <div className="form-group">
-            <label htmlFor="round">Round:</label>
-            <input type="text" id="round" name="round" />
-          </div>
-          <div className="form-group">
-            <label htmlFor="notes">Notes:</label>
-            <textarea id="notes" name="notes" rows="4" />
-          </div>
+          </label>
+
+          <label>
+            Interview Date:
+            <input
+              type="date"
+              value={interviewDate}
+              onChange={(e) => setInterviewDate(e.target.value)}
+            />
+          </label>
+
+          <label>
+            Interview Time:
+            <input
+              type="time"
+              value={interviewTime}
+              onChange={(e) => setInterviewTime(e.target.value)}
+            />
+          </label>
+
+          <label>
+            Round:
+            <select value={round} onChange={(e) => setRound(e.target.value)}>
+              <option value="">Select Round</option>
+              <option value="First Round">First Round</option>
+              <option value="Second Round">Second Round</option>
+              {/* Add more rounds as needed */}
+            </select>
+          </label>
+
+          <label>
+            Notes:
+            <textarea
+              value={notes}
+              onChange={(e) => setNotes(e.target.value)}
+            />
+          </label>
+
           <button type="submit">Submit</button>
         </form>
       </div>
