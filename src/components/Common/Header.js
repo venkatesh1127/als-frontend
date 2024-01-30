@@ -1,3 +1,5 @@
+// Header.js
+
 import React, { useState } from 'react';
 import "../../css/Common/Header.css"
 
@@ -11,10 +13,12 @@ const Header = ({ isLoggedIn }) => {
   return (
     <header className="header">
       <div className="header-left">
-        <img src="als_logo.png" alt="Company Logo" className="header-logo" />
-        <button className="header-menu-button" onClick={handleMenuClick}>
-          {/* Menu icon goes here */}
-        </button>
+        <div className="logo-and-company">
+          <img src="als_logo.png" alt="Company Logo" className="header-logo" />
+          <div className="company-info">
+            <p className="company-name">APPLAB SYSTEMS INC</p>
+          </div>
+        </div>
       </div>
       <div className="header-right">
         {isLoggedIn && (
