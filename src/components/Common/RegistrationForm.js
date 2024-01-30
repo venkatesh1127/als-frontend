@@ -1,7 +1,8 @@
 // RegistrationForm.js
 
 import React, { useState } from 'react';
-import '../css/RegistrationForm.css'; // Import the CSS file for styling
+import '../../css/Common/RegistrationForm.css'; // Import the CSS file for styling
+import SubmitButton from '../Common/SubmitButton';
 
 const RegistrationForm = () => {
   const [firstName, setFirstName] = useState('');
@@ -98,7 +99,7 @@ const RegistrationForm = () => {
             required
           />
         </div>
-        <button type="submit" className="registration-submit">Next</button>
+        <SubmitButton title="Submit" />
       </form>
     </div>
   );
