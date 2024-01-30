@@ -1,7 +1,7 @@
 // EmployeeProfile.js
 
 import React, { useState } from 'react';
-import '../css/EmployeeProfile.css';
+import '../../css/Employee/EmployeeHome.css';
 
 const EmployeeProfile = () => {
   const [showAddPhotoModal, setShowAddPhotoModal] = useState(false);
