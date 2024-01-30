@@ -1,6 +1,6 @@
-// AddInterview.js
 import React from 'react';
 import '../../css/Employee/AddInterview.css'; // Update the CSS import
+import SubmitButton from '../Common/SubmitButton'; // Import the SubmitButton component
 
 const AddInterview = ({ isOpen, onClose, onSubmit }) => {
   if (!isOpen) return null;
@@ -40,9 +40,11 @@ const AddInterview = ({ isOpen, onClose, onSubmit }) => {
           </div>
           <div className="form-group">
             <label htmlFor="notes">Notes:</label>
-            <textarea id="notes" name="notes" rows="4" />
+            {/* Updated textarea with rows and cols attributes */}
+            <textarea id="notes" name="notes" rows="4" cols="50" />
           </div>
-          <button type="submit">Submit</button>
+          {/* Use the SubmitButton component */}
+          <SubmitButton label="Submit" />
         </form>
       </div>
     </div>
