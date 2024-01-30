@@ -3,17 +3,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../../css/Common/SubmitButton.css';
 
-const SubmitButton = ({ onSubmit, label }) => {
+const SubmitButton = ({ title, onSubmit }) => {
   return (
-    <button type="button" onClick={onSubmit}>
-      {label}
+    <button className="submit-button" onClick={onSubmit}>
+      {title}
     </button>
   );
 };
 
 SubmitButton.propTypes = {
+  title: PropTypes.string.isRequired,
   onSubmit: PropTypes.func.isRequired,
-  label: PropTypes.string.isRequired,
 };
 
 export default SubmitButton;
