@@ -23,8 +23,8 @@
 
 /* Styling for EmployeeProfile */
 .employee-profile-container {
-  flex: 0 0 20%;
-  margin-right: 20px;
+  flex: 1 1 10%; /* 0 0 20*/
+  margin-right: -400px; /*20*/
 }
 
 /* Styling for EmployeeOptions */

@@ -11,21 +11,21 @@
 
 /* Styling for each option */
 .option {
-  flex-basis: calc(33.33% - 10px); /* Each option occupies 33.33% of the container width with a 10px gap */
-  background-color: rgba(255, 255, 255, 0.8); /* Transparent and slightly faded background */
-  padding: 20px;
+  flex-basis: calc(40% - 200px); /* Each option occupies 33.33% of the container width with a 10px gap */
+  background-color: rgba(14, 199, 224, 0.8); /* Transparent and slightly faded background */
+  padding: 50px;
   border-radius: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(114, 9, 218, 0.1); /* 2,4*/
   text-align: center;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-bottom: 10px; /* Added margin for better spacing */
+  margin-bottom: 150px; /* Added margin for better spacing */ /*10*/
 }
 
 .option:hover {
-  background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparent on hover */
+  background-color: rgba(46, 98, 230, 0.9); /* Slightly less transparent on hover */
 }
 
 /* Adjustments for better spacing if needed */
