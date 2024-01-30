@@ -1,0 +1,21 @@
+/* SubmitButton.css */
+
+/* Styles for the submit button */
+.submit-button {
+    font-style: italic; /* Italic font style */
+    color: blue; /* Blue text color */
+    font-family: Arial, sans-serif; /* Font family */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold font weight */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Hover effect */
+  .submit-button:hover {
+    background-color: #160391; /* Light blue background color on hover */
+  }
+  
