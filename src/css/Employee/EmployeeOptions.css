@@ -1,19 +1,18 @@
-
 /* EmployeeOptions.css */
 
 /* Basic styling for the options container */
 .options-container {
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: space-between;  Ensure equal spacing between buttons */
   gap: 15px; /* Adjusted gap for better spacing */
   width: 100%; /* Ensure it takes up the full width */
 }
 
 /* Styling for each option */
 .option {
-  flex-basis: calc(33.33% - 10px); /* Each option occupies 33.33% of the container width with a 10px gap */
-  background-color: rgba(255, 255, 255, 0.8); /* Transparent and slightly faded background */
+  width: calc(33.33% - 30px); /* Each option occupies 33.33% of the container width with a 15px gap on each side */
+  height: 150px; /* Set a fixed height for the options */
+  background-color: #fff; /* White background color */
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -22,23 +21,37 @@
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-bottom: 10px; /* Added margin for better spacing */
+  margin-bottom: 15px; /* Adjusted margin for better spacing */
 }
-
+.option::before {
+  content: ""; /* Create a pseudo-element to hold the background image */
+  position: absolute; /* Position the background image relative to the option */
+  top: 0; /* Align the background image to the top */
+  left: 0; /* Align the background image to the left */
+  width: 100%; /* Set the width of the background image to cover the entire option */
+  height: 100%; /* Set the height of the background image to cover the entire option */
+  background-image: url(../../../public/als_logo.png); /* Specify the path to your background image */
+  opacity: 0.2; /* Adjust the opacity of the background image */
+  z-index: -1; /* Set z-index to send the background image behind the option content */
+  background-size: cover; /* Cover the entire option with the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  border-radius: 10px; /* Rounded corners */
+}
 .option:hover {
-  background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparent on hover */
+  background-color: #518cf8; /* Yellow background color on hover */
+  
 }
 
 /* Adjustments for better spacing if needed */
 @media (max-width: 768px) {
   .option {
-    flex-basis: calc(50% - 10px); /* Each option occupies 50% of the container width on smaller screens */
+    width: calc(50% - 30px); /* Each option occupies 50% of the container width on smaller screens */
   }
 }
 
 /* Additional adjustment for smaller screens */
 @media (max-width: 480px) {
   .option {
-    flex-basis: 100%; /* Each option occupies 100% of the container width on even smaller screens */
+    width: calc(100% - 30px); /* Each option occupies 100% of the container width on even smaller screens */
   }
 }
