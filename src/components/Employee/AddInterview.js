@@ -44,7 +44,7 @@ const AddInterview = ({ isOpen, onClose, onSubmit }) => {
             <textarea id="notes" name="notes" rows="4" cols="50" />
           </div>
           {/* Use the SubmitButton component */}
-          <SubmitButton label="Submit" >Submit</SubmitButton>
+          <SubmitButton title="Submit"  className="submit-button"/>
         </form>
       </div>
     </div>
