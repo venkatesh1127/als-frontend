@@ -90,7 +90,7 @@ textarea {
   padding: 10px;
   border: 1px solid #ccc; /* Add border for textarea */
   border-radius: 5px; /* Rounded corners */
-  resize: vertical; /* Allow vertical resizing */
+  resize: none; /* Allow vertical resizing */
   min-height: 100px; /* Set a minimum height */
   max-height: 200px; /* Set a maximum height */
   overflow-y: auto; /* Enable vertical scrollbar if needed */

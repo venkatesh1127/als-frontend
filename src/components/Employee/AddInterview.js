@@ -34,10 +34,16 @@ const AddInterview = ({ isOpen, onClose, onSubmit }) => {
             <label htmlFor="interviewDateTime">Interview Date and Time:</label>
             <input type="datetime-local" id="interviewDateTime" name="interviewDateTime" />
           </div>
-          <div className="form-group">
-            <label htmlFor="round">Round:</label>
-            <input type="text" id="round" name="round" />
-          </div>
+          <div class="form-group">
+  <label for="round">Round:</label>
+  <select className="form-group"  id="round" name="round">
+    <option value="1">Round 1</option>
+    <option value="2">Round 2</option>
+    <option value="3">Round 3</option>
+    {/* Add more options as needed */}
+  </select>
+</div>
+
           <div className="form-group">
             <label htmlFor="notes">Notes:</label>
             {/* Updated textarea with rows and cols attributes */}
